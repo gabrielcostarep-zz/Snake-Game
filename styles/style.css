@@ -1,0 +1,24 @@
+:root {
+    --background1: #263445;
+    --background2: #1F2836;
+    --snake: #2D8BD4;
+    --apple: #fd4a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background1);
+}
+
+.container {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 5%;
+}
+
+#stage {
+    background-color: var(--background1);
+    border: 2px solid white;
+}
