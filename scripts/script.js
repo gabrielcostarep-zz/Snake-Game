@@ -3,16 +3,20 @@ var ctx = stage.getContext("2d");
 
 const velocity = 1;
 var velocityX = velocityY = 0;
-var positionX = positionY = 10;
+var positionX = positionY = 6;
 var lengthPoint = 30;
 var quantityPoint = 20;
-var appleX = appleY = 15;
+var appleX = appleY = 13;
 var trail = [];
 var tail = 5;
 
+var lineClear = 0;
+var lineDark = lengthPoint;
+var column = 0;
+
 document.addEventListener("keydown", keyPush);
 
-setInterval(game, 85);
+setInterval(game, 120);
 
 function game() {
     positionX += velocityX;
@@ -34,8 +38,8 @@ function game() {
         positionY = 0;
     }
 
-    ctx.fillStyle = "#263445";
-    ctx.fillRect(0, 0, stage.width, stage.height);
+    // Não está atualizando conforme a cobrinha atualiza
+    board("#263445", "#1F2836");
 
     ctx.fillStyle = "#fd4a4a";
     ctx.fillRect(appleX * lengthPoint, appleY * lengthPoint, lengthPoint, lengthPoint);
@@ -83,8 +87,30 @@ function keyPush(event) {
             velocityX = 0;
             velocityY = velocity;
             break;
+    }
+}
 
-        default:
-            break;
+function board(colorClear, colorDark) {
+    for (let j = 0; j < quantityPoint * quantityPoint; j++) {
+
+        ctx.fillStyle = colorClear;
+        ctx.fillRect(lineClear, column, lengthPoint, lengthPoint);
+
+        ctx.fillStyle = colorDark;
+        ctx.fillRect(lineDark, column, lengthPoint, lengthPoint);
+
+        lineClear += lengthPoint * 2;
+        lineDark += lengthPoint * 2;
+
+        // Acredito que o erro esteja nesses ifs
+        if (lineClear > lengthPoint * quantityPoint) {
+            lineClear = 0;
+            column += lengthPoint;
+        }
+
+        if (lineDark > lengthPoint * quantityPoint) {
+            lineDark = 0;
+            column += lengthPoint;
+        }
     }
 }
