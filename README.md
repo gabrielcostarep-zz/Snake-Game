@@ -1,7 +1,7 @@
 🕹️ Exemplo do jogo da cobrinha utilizando JavaScript
 
-<!-- ➡️ [Acesse a página clicando aqui](https://gabrielcostarep.github.io/Snake-Game/) ⬅️
-
+➡️ [Acesse a página clicando aqui](https://gabrielcostarep.github.io/Snake-Game/) ⬅️
+<!-- 
  <div align="center" >
   <img src="./Readme-cell-gif.gif" alt="demo-mobile" height="425">
 </div>
