@@ -4,7 +4,7 @@ var ctx = stage.getContext("2d");
 const velocity = 1;
 var velocityX = velocityY = 0;
 var positionX = positionY = 6;
-var lengthPoint = 30;
+var lengthPoint = 35;
 var quantityPoint = 20;
 var appleX = appleY = 13;
 var trail = [];
@@ -12,7 +12,8 @@ var tail = 5;
 
 var lineClear = 0;
 var lineDark = lengthPoint;
-var column = 0;
+var firstColumn = 0;
+var secondColumn = lengthPoint;
 
 document.addEventListener("keydown", keyPush);
 
