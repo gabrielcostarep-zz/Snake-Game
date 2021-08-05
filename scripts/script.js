@@ -105,11 +105,7 @@ function board(colorClear, colorDark) {
         // Acredito que o erro esteja nesses ifs
         if (lineClear > lengthPoint * quantityPoint) {
             lineClear = 0;
-            column += lengthPoint;
-        }
-
-        if (lineDark > lengthPoint * quantityPoint) {
-            lineDark = 0;
+            lineDark = lengthPoint;
             column += lengthPoint;
         }
     }
