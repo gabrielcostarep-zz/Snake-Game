@@ -90,23 +90,41 @@ function keyPush(event) {
     }
 }
 
+// Gambiarra, mas deu certo kkk
 function board(colorClear, colorDark) {
     for (let j = 0; j < quantityPoint * quantityPoint; j++) {
 
         ctx.fillStyle = colorClear;
-        ctx.fillRect(lineClear, column, lengthPoint, lengthPoint);
+        ctx.fillRect(lineClear, firstColumn, lengthPoint, lengthPoint);
 
         ctx.fillStyle = colorDark;
-        ctx.fillRect(lineDark, column, lengthPoint, lengthPoint);
+        ctx.fillRect(lineDark, firstColumn, lengthPoint, lengthPoint);
 
         lineClear += lengthPoint * 2;
         lineDark += lengthPoint * 2;
 
-        // Acredito que o erro esteja nesses ifs
+        if (lineClear > lengthPoint * quantityPoint - 1) {
+            lineClear = 0;
+            lineDark = lengthPoint;
+            firstColumn += lengthPoint * 2;
+        }
+    }
+
+    for (let k = 0; k < quantityPoint * quantityPoint; k++) {
+
+        ctx.fillStyle = colorDark;
+        ctx.fillRect(lineDark - lengthPoint, secondColumn, lengthPoint, lengthPoint);
+
+        ctx.fillStyle = colorClear;
+        ctx.fillRect(lineClear + lengthPoint, secondColumn, lengthPoint, lengthPoint);
+
+        lineClear += lengthPoint * 2;
+        lineDark += lengthPoint * 2;
+
         if (lineClear > lengthPoint * quantityPoint) {
             lineClear = 0;
             lineDark = lengthPoint;
-            column += lengthPoint;
+            secondColumn += lengthPoint * 2;
         }
     }
 }
