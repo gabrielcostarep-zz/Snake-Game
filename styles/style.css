@@ -1,7 +1,6 @@
 :root {
-    --background1: #789dca;
+    --background1: #263445;
     --background2: #1F2836;
-    --background3: #263445;
     --snake: #2D8BD4;
     --apple: #fd4a4a;
 }
@@ -16,7 +15,7 @@
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    margin-top: 5%;
+    margin-top: 100px;
 }
 
 #stage {
