@@ -102,7 +102,7 @@ function board(colorClear, colorDark) {
         lineClear += lengthPoint * 2;
         lineDark += lengthPoint * 2;
 
-        // Acredito que o erro esteja nesses ifs
+        // Acredito que o erro esteja nesse if
         if (lineClear > lengthPoint * quantityPoint) {
             lineClear = 0;
             lineDark = lengthPoint;
