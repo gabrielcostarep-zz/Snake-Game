@@ -119,12 +119,12 @@ function board(colorClear, colorDark) {
         ctx.fillStyle = colorClear;
         ctx.fillRect(lineClear + lengthPoint, secondColumn, lengthPoint, lengthPoint);
 
-        lineClear += lengthPoint * 2;
         lineDark += lengthPoint * 2;
+        lineClear += lengthPoint * 2;
 
-        if (lineClear > lengthPoint * quantityPoint) {
-            lineClear = 0;
+        if (lineDark > lengthPoint * quantityPoint) {
             lineDark = lengthPoint;
+            lineClear = 0;
             secondColumn += lengthPoint * 2;
         }
     }
