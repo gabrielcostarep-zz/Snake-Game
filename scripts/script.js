@@ -10,14 +10,12 @@ var appleX = appleY = 13;
 var trail = [];
 var tail = 5;
 
-var lineClear = 0;
-var lineDark = lengthPoint;
-var firstColumn = 0;
-var secondColumn = lengthPoint;
+var lineClear = firstColumn = 0;
+var lineDark = secondColumn = lengthPoint;
 
 document.addEventListener("keydown", keyPush);
 
-setInterval(game, 120);
+setInterval(game, 100);
 
 function game() {
     positionX += velocityX;
@@ -39,7 +37,6 @@ function game() {
         positionY = 0;
     }
 
-    // Não está atualizando conforme a cobrinha atualiza
     board("#263445", "#1F2836");
 
     ctx.fillStyle = "#fd4a4a";
@@ -91,7 +88,6 @@ function keyPush(event) {
     }
 }
 
-// Gambiarra, mas deu certo kkk
 function board(colorClear, colorDark) {
     for (let j = 0; j < quantityPoint * quantityPoint; j++) {
 
@@ -128,4 +124,8 @@ function board(colorClear, colorDark) {
             secondColumn += lengthPoint * 2;
         }
     }
+
+    lineClear = firstColumn = 0;
+    lineDark = secondColumn = lengthPoint;
+
 }
