@@ -1,4 +1,3 @@
-# 🚧 Página em Construção 🚧
 🕹️ Exemplo do jogo da cobrinha utilizando JavaScript
 
 ➡️ [Acesse a página clicando aqui](https://gabrielcostarep.github.io/Snake-Game/) ⬅️
