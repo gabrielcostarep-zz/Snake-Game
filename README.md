@@ -16,4 +16,4 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 <br>
 
-Feito por Gabriel Costa 👋🏽[Veja meu Linkedin](https://www.linkedin.com/in/gabrielcostadev/)
+Feito por Gabriel Costa 👋🏾 [Veja meu Linkedin](https://www.linkedin.com/in/gabrielcostadev/)
