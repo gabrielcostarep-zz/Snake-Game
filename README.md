@@ -3,7 +3,7 @@
 ➡️ [Acesse a página clicando aqui](https://gabrielcostarep.github.io/Snake-Game/) ⬅️
 
  <div align="center" >
-  <img src="./Readme-gif.gif" alt="demo-web" height="425">
+  <img src="./Readme-gif.gif" alt="demo-web" height="500em">
 </div>
 
 ## 🚀 Tecnologias
